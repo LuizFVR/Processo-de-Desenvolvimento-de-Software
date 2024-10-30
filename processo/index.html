@@ -1,57 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fluxograma</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .box {
+            padding: 10px 20px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .box2 {
+            padding: 10px 20px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #fff;
+            font-weight: bold;
+            margin-left: 44vw;
+            cursor: pointer;
+        }
+        .arrow {
+            font-size: 24px;
+            color: #000;
+        }
+        .arrow2 {
+            font-size: 24px;
+            color: #000;
+            margin-left: 44vw;
+        }
+    </style>
 </head>
 <body>
-    <html>
-  <head>
-
-    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
-    <script type='text/javascript'>
-      google.load('visualization', '1', {packages:['orgchart']});
-      google.setOnLoadCallback(drawChart);
-      
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Name');
-        data.addColumn('string', 'Manager');
-        data.addColumn('string', 'ToolTip');
-        data.addRows([
-          [{v:'TJPE', f:'TJPE'}, '', ''],
-          [{v:'PRESIDENCIA', f:'PRESIDENCIA'}, 'TJPE', ''],
-          [{v:'COMITE GEST PROJ PROC JUD ELET', f:'COMITE GEST PROJ PROC JUD ELET'}, 'PRESIDENCIA', ''],
-          [{v:'ASSESSORIA ESP PRESIDENCIA', f:'ASSESSORIA ESP PRESIDENCIA'}, 'PRESIDENCIA', ''],
-          [{v:'NUCLEO MODERNIZACAO JUDICIARIO', f:'NUCLEO MODERNIZACAO JUDICIARIO'}, 'ASSESSORIA ESP PRESIDENCIA', ''],
-          [{v:'CONSULTORIA JURIDICA', f:'CONSULTORIA JURIDICA'}, 'PRESIDENCIA', ''],
-          [{v:'NUCLEO DE APOIO ADMINISTRATIVO', f:'NUCLEO DE APOIO ADMINISTRATIVO'}, 'CONSULTORIA JURIDICA', ''],
-          [{v:'NUCLEO ORIENTA JURIDI SERVIDOR', f:'NUCLEO ORIENTA JURIDI SERVIDOR'}, 'CONSULTORIA JURIDICA', ''],
-          [{v:'ASSESSORIA JURIDICA', f:'ASSESSORIA JURIDICA'}, 'CONSULTORIA JURIDICA', ''],
-          [{v:'VICE-PRESIDENCIA', f:'VICE-PRESIDENCIA'}, 'TJPE', ''],
-          [{v:'ASSESSORIA ESP VICE-PRESID', f:'ASSESSORIA ESP VICE-PRESID'}, 'VICE-PRESIDENCIA', ''],
-          [{v:'SECRETARIA GERAL VICE-PRESID', f:'SECRETARIA GERAL VICE-PRESID'}, 'VICE-PRESIDENCIA', ''],
-          [{v:'GAB VICE PRESIDENCIA', f:'GAB VICE PRESIDENCIA'}, 'VICE-PRESIDENCIA', ''],
-          [{v:'CORREGEDORIA GERAL DA JUSTICA', f:'CORREGEDORIA GERAL DA JUSTICA'}, 'TJPE', ''],
-          [{v:'GABINETES DE DESEMBARGADORES', f:'GABINETES DE DESEMBARGADORES'}, 'TJPE', ''],
-          [{v:'CONSELHO DA MAGISTRATURA', f:'CONSELHO DA MAGISTRATURA'}, 'TJPE', ''],
-          [{v:'GRUPO CAMARAS DIREITO PUBLICO', f:'GRUPO CAMARAS DIREITO PUBLICO'}, 'TJPE', ''],
-      
-      /*['Alice', 'Mike', ''],
-          ['Bob', 'Jim', 'Bob Sponge'],
-      ['Carol', 'Bob', '']*/
-        ]);
-        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
-        chart.draw(data, {allowHtml:true, allowCollapse:true});
-      }
-    </script>
-  </head>
-
-  <body>
-    *Duplo-clique expande ou recolhe os itens inferiores.
-    <div id='chart_div'></div>
-  </body>
-</html>
+    <div class="container">
+        <div class="row">
+            <button class="box">Definir escopo dos requisitos</button>
+            <div class="arrow">🡢</div>
+            <button  class="box">Elencar requisitos</button>
+            <div class="arrow">🡢</div>
+            <button class="box">Projetar arquitetura</button>
+            <div class="arrow">🡢</div>
+            <button class="box">Desenvolvimento</button>
+        </div>
+        <div class="arrow2">🡣🡡</div>
+        <div class="row">
+            <button class="box2">Validar software</button>
+        </div>
+    </div>
 </body>
 </html>
