@@ -1,0 +1,25 @@
+body {
+  background-image: url("button1.png");
+  background-repeat: no-repeat;
+}
+button {
+    background-color: #007BFF; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-left: 13.5vw;
+    margin-top: 75vh;
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}

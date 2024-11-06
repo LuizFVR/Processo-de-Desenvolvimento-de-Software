@@ -3,75 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluxograma</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .box {
-            padding: 10px 20px;
-            border: 2px solid #000;
-            border-radius: 5px;
-            text-align: center;
-            background-color: #fff;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .box2 {
-            padding: 10px 20px;
-            border: 2px solid #000;
-            border-radius: 5px;
-            text-align: center;
-            background-color: #fff;
-            font-weight: bold;
-            margin-left: 44vw;
-            cursor: pointer;
-        }
-        .arrow {
-            font-size: 24px;
-            color: #000;
-        }
-        .arrow2 {
-            font-size: 24px;
-            color: #000;
-            margin-left: 44vw;
-        }
-    </style>
+    <title>Fluxograma - 1º Nível</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <button class="box">Definir escopo dos requisitos</button>
-            <div class="arrow">🡢</div>
-            <button  class="box">Elencar requisitos</button>
-            <div class="arrow">🡢</div>
-            <button class="box">Projetar arquitetura</button>
+            <button class="box"><a href="button1.html">Análise e Projeto</a></button>
+            <div class="arrow">⇆</div>
+            <button  class="box">Validação e Verificação</button>
             <div class="arrow">🡢</div>
             <button class="box">Desenvolvimento</button>
         </div>
-        <div class="arrow2">🡣🡡</div>
+        <div class="arrow2">⇅</div>
         <div class="row">
-            <button class="box2">Validar software</button>
+            <button class="box2">Teste</button>
+            <div class="arrow">🡢</div>
+            <button  class="box">Liberação para o Cliente</button>
         </div>
     </div>
 </body>
